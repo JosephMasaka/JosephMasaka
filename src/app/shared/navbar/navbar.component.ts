@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { Component, AfterViewInit, HostListener, Inject, PLATFORM_ID, ElementRef, Renderer2 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,12 @@ import { Component, AfterViewInit, HostListener } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements AfterViewInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: object, private el: ElementRef, private renderer: Renderer2) {}
 
-  ngAfterViewInit() {
-    this.activateNavbar();
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.activateNavbar();
+    }
   }
 
   activateNavbar() {
@@ -44,5 +48,30 @@ export class NavbarComponent implements AfterViewInit {
   @HostListener('window:resize')
   onResize() {
     setTimeout(() => this.activateNavbar(), 500);
+  }
+
+  
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const navbar = this.el.nativeElement.querySelector('.navbar');
+    const horiSelectorLeft = this.el.nativeElement.querySelector('.left');
+    const horiSelectorRight = this.el.nativeElement.querySelector('.right');
+    if (window.scrollY > 0) {
+      this.renderer.addClass(navbar, 'default');
+      // this.renderer.addClass(horiSelectorLeft, 'default');
+      // this.renderer.addClass(horiSelectorRight, 'default');
+      this.renderer.removeClass(horiSelectorLeft, 'd-none');
+      this.renderer.removeClass(horiSelectorRight, 'd-none');
+    } else {
+      // this.renderer.removeStyle(navbar, 'position');
+      // this.renderer.removeStyle(navbar, 'top');
+      // this.renderer.removeStyle(navbar, 'width');
+      this.renderer.removeClass(navbar, 'default');
+      // this.renderer.removeClass(horiSelectorLeft, 'default');
+      // this.renderer.removeClass(horiSelectorRight, 'default');
+      this.renderer.addClass(horiSelectorLeft, 'd-none');
+      this.renderer.addClass(horiSelectorRight, 'd-none');
+    }
   }
 }
