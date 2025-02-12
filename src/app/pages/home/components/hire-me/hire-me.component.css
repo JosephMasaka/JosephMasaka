@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.cta-section {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cta-section .text-highlight {
+    color: #fff;
+}
+
+.cta-section .cta-btn {
+    background-color: #fff;
+    color: #ff7e5f;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-section .cta-btn:hover {
+    background-color: #ff5733;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.text-lead  {
+    font-family: "Montserrat", sans-serif;
+}
