@@ -5,11 +5,12 @@ import { ShowcaseComponent } from './components/showcase/showcase.component';
 import { AboutBriefComponent } from './components/about-brief/about-brief.component';
 import { TechnicalAcumenComponent } from './components/technical-acumen/technical-acumen.component';
 import { ValuePrepositionComponent } from './components/value-preposition/value-preposition.component';
+import { HireMeComponent } from './components/hire-me/hire-me.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, ShowcaseComponent, AboutBriefComponent, TechnicalAcumenComponent, ValuePrepositionComponent],
+  imports: [CommonModule, NavbarComponent, ShowcaseComponent, AboutBriefComponent, TechnicalAcumenComponent, ValuePrepositionComponent, HireMeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
