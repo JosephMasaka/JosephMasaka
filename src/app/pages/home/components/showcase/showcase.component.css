@@ -2,7 +2,9 @@
     background-color: #FF7F00 !important;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .overlay h1 {
     font-family: "Montserrat", serif;
