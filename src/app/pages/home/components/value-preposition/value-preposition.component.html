@@ -1,73 +1,71 @@
 <section class="value-proposition py-5">
     <div class="container text-center">
+        <!-- Headline -->
         <div class="headline d-flex mt-5 mb-3 mx-auto justify-content-center">
             <div class="headline-1 me-2"></div>
             <div class="headline-2"></div>
         </div>
+
         <!-- Section Title -->
         <h2 class="text-highlight mb-4 text-lead">Why Work With Me?</h2>
         <p class="text-about text-muted">
-            I build **scalable, high-performance applications** that solve real-world problems.  
-            Whether it's **web development, API integrations, or cloud solutions**, I bring a blend of creativity and efficiency to every project.
+            I build <strong>scalable, high-performance applications</strong> that solve real-world problems.  
+            Whether it's <strong>web development, API integrations, or cloud solutions</strong>, I bring a blend of creativity and efficiency to every project.
         </p>
 
         <!-- Value Proposition Cards -->
-        <div class="d-flex justify-content-center mt-5 text-left">
-            <div class="col-lg-6 col-md-6 col-sm-12 p-3">
-                <div class="col-md-4 col-lg-12 p-3 value mb-2">
-                    <div class="value-card">
-                        <i class="fas fa-lightbulb text-highlight"></i>
-                        <h4 class="text-highlight">Innovative Solutions</h4>
-                        <p>Custom-built applications tailored to meet business goals with modern technologies.</p>
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="value-card p-4">
+                    <i class="fas fa-lightbulb text-highlight"></i>
+                    <h4>Innovative Solutions</h4>
+                    <p>Custom-built applications tailored to meet business goals with modern technologies.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="value-card p-4">
+                    <i class="fas fa-rocket text-highlight"></i>
+                    <h4>Scalability & Performance</h4>
+                    <p>Optimized code, clean architecture, and cloud-ready solutions for seamless growth.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="value-card p-4">
+                    <i class="fas fa-user-friends text-highlight"></i>
+                    <h4>Client-Focused</h4>
+                    <p>Understanding your needs, delivering results, and ensuring long-term support.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fun Metrics Section -->
+        <div class="container mt-5" #statsSection>
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-6 col-12 stat">
+                    <i class="fas fa-coffee"></i>
+                    <h3 id="coffee-count">0</h3>
+                    <p>Cups of Coffee</p>
+                    <div class="progress">
+                        <div id="coffee-bar" class="progress-bar"></div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-12 value p-3 mb-2">
-                    <div class="value-card">
-                        <i class="fas fa-rocket text-highlight"></i>
-                        <h4 class="text-highlight">Scalability & Performance</h4>
-                        <p>Optimized code, clean architecture, and cloud-ready solutions for seamless growth.</p>
+                <div class="col-md-4 col-sm-6 col-12 stat">
+                    <i class="fas fa-code"></i>
+                    <h3 id="code-count">0</h3>
+                    <p>Hours of Coding</p>
+                    <div class="progress">
+                        <div id="code-bar" class="progress-bar"></div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-12 value p-3">
-                    <div class="value-card">
-                        <i class="fas fa-user-friends text-highlight"></i>
-                        <h4 class="text-highlight">Client-Focused</h4>
-                        <p>Understanding your needs, delivering results, and ensuring long-term support.</p>
+                <div class="col-md-4 col-sm-12 col-12 stat">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3 id="projects-count">0</h3>
+                    <p>Projects Completed</p>
+                    <div class="progress">
+                        <div id="projects-bar" class="progress-bar"></div>
                     </div>
                 </div>
             </div>
-
-            <!-- Fun Metrics Section -->
-            <div class="container mt-5" #statsSection>
-                <div class="stats-row text-center">
-                    <div class="col-6 col-sm-12 stat mb-5 pb-5">
-                        <i class="fas fa-coffee"></i>
-                        <h3 id="coffee-count">0</h3>
-                        <p>Cups of Coffee</p>
-                        <div class="progress">
-                            <div id="coffee-bar" class="progress-bar" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-12 stat mb-5 pb-5">
-                        <i class="fas fa-code"></i>
-                        <h3 id="code-count">0</h3>
-                        <p>Hours of Coding</p>
-                        <div class="progress">
-                            <div id="code-bar" class="progress-bar" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-12 stat mb-5 pb-5">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3 id="projects-count">0</h3>
-                        <p>Projects Completed</p>
-                        <div class="progress">
-                            <div id="projects-bar" class="progress-bar" role="progressbar"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>      
-
-
-        </div>
+        </div>      
     </div>
 </section>

@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-value-preposition',
@@ -8,38 +9,60 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class ValuePrepositionComponent implements AfterViewInit {
   
-  @ViewChild('statsSection', { static: false }) statsSection!: ElementRef;
+  @ViewChild('statsSection', { static: true }) statsSection!: ElementRef;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
   ngAfterViewInit() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.animateCounter('coffee-count', 1500, 'coffee-bar', 75);
-          this.animateCounter('code-count', 10000, 'code-bar', 100);
-          this.animateCounter('projects-count', 50, 'projects-bar', 85);
-          observer.disconnect(); // Prevents re-triggering
+    if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
+      setTimeout(() => {
+        console.log("Stats Section after delay: ", this.statsSection);
+        if (this.statsSection) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.animateCounter("coffee-count", 1200);
+                this.animateCounter("code-count", 4800);
+                this.animateCounter("projects-count", 35);
+  
+                this.animateProgressBar("coffee-bar", 80);
+                this.animateProgressBar("code-bar", 95);
+                this.animateProgressBar("projects-bar", 70);
+  
+                observer.disconnect();
+              }
+            });
+          }, { threshold: 0.5 });
+  
+          observer.observe(this.statsSection.nativeElement);
         }
-      });
-    }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
-
-    if (this.statsSection) {
-      observer.observe(this.statsSection.nativeElement);
+      }, 500); // Small delay to ensure DOM loads
     }
   }
+  
 
-  animateCounter(id: string, target: number, barId: string, maxWidth: number) {
+  animateCounter(id: string, target: number) {
     let count = 0;
-    const speed = target / 100;
+    const step = Math.ceil(target / 100);
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
     const interval = setInterval(() => {
-      count += Math.ceil(speed);
+      count += step;
       if (count >= target) {
         count = target;
         clearInterval(interval);
       }
-      const element = document.getElementById(id);
-      if (element) element.textContent = count.toLocaleString();
-      const progressBar = document.getElementById(barId);
-      if (progressBar) progressBar.style.width = `${maxWidth}%`;
+      element.textContent = count.toLocaleString();
     }, 30);
+  }
+
+  animateProgressBar(id: string, targetWidth: number) {
+    const progressBar = document.getElementById(id);
+    if (progressBar) {
+      progressBar.style.transition = "width 1s ease-in-out";
+      progressBar.style.width = `${targetWidth}%`;
+    }
   }
 }
