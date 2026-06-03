@@ -1,27 +1,146 @@
-# JosephMasaka
+# Hi, I'm Joseph Masaka 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+### Full Stack Software Developer | Laravel | Angular | Enterprise Systems | API Integrations
 
-## Development server
+I'm a Full Stack Software Developer based in Nairobi, Kenya, with 5+ years of experience building scalable web applications, enterprise systems, and cloud-based solutions.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+My experience spans Human Resource Management Systems (HRMS), Payroll Systems, Asset Management Platforms, ERP integrations, REST APIs, and modern web applications. I enjoy transforming complex business requirements into secure, maintainable, and user-friendly software solutions.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## What I Do
 
-## Build
+* Build enterprise-grade web applications using Laravel and Angular
+* Design and develop RESTful APIs and backend services
+* Integrate third-party systems including SAP and payment gateways
+* Architect scalable database solutions and optimize performance
+* Implement CI/CD pipelines and Docker-based deployments
+* Develop secure, responsive, and maintainable full-stack applications
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Tech Stack
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Backend
 
-## Running end-to-end tests
+* PHP
+* Laravel
+* REST APIs
+* MySQL
+* PostgreSQL
+* Authentication & Authorization
+* Queue Processing
+* Background Jobs
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Frontend
 
-## Further help
+* Angular
+* React
+* TypeScript
+* JavaScript
+* Tailwind CSS
+* Bootstrap
+* Responsive Design
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Cloud & DevOps
+
+* AWS (EC2, S3)
+* Docker
+* GitHub Actions
+* CI/CD Pipelines
+* Linux
+
+### Integrations
+
+* SAP Integration
+* Payment Gateways
+* Third-Party APIs
+* Data Synchronization Services
+
+---
+
+## Featured Projects
+
+### HRMS Platform
+
+Enterprise Human Resource Management and Payroll System with SAP integration.
+
+**Key Features**
+
+* Employee Management
+* Payroll Automation
+* Attendance Management
+* Leave Management
+* SAP Synchronization
+* REST API Services
+
+**Tech**
+Laravel • MySQL • Docker • AWS • REST APIs
+
+---
+
+### AssetIQ
+
+Modern Asset Management Platform designed for organizations managing distributed assets.
+
+**Key Features**
+
+* Asset Lifecycle Management
+* Depreciation Automation
+* Role-Based Access Control
+* Reporting & Analytics
+* Workflow Automation
+
+**Tech**
+Laravel • Angular • MySQL • AWS
+
+🔗 Repository:
+
+* AssetIQ Frontend
+* AssetIQ Backend
+
+---
+
+### Daily Chess Academy
+
+Digital platform for chess players, coaches, tournaments, and learning resources.
+
+**Key Features**
+
+* Course Management
+* Event Registration
+* E-commerce
+* Payment Gateway Integration
+* Role-Based Access Control
+
+**Tech**
+Laravel • Angular • MySQL
+
+---
+
+## Current Focus
+
+* Enterprise Software Development
+* SaaS Platforms
+* Laravel Ecosystem
+* Angular Applications
+* System Integrations
+* Cloud Deployments
+* Open Source Contributions
+
+---
+
+## Connect With Me
+
+Nairobi, Kenya
+
+[masakajoseph14@gmail.com](mailto:masakajoseph14@gmail.com)
+
+LinkedIn:
+[www.linkedin.com/in/joe-masaka-b71b6a198](http://www.linkedin.com/in/joe-masaka-b71b6a198)
+
+💻 GitHub:
+github.com/JosephMasaka
+
+🌐 Portfolio:
+(Add your latest portfolio URL here)
